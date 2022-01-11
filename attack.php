@@ -72,7 +72,7 @@
         return die("Not a valid port");
     }
 
-    if(filter_var($basicKey, FILTER_VALIDATE_INT) == false)
+    if(filter_var($for, FILTER_VALIDATE_INT) == false)
     {
         return die("Invalid format");
     }
