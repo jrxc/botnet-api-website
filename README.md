@@ -10,3 +10,5 @@ If you need support then feel free to add me on discord
 jrx#4510
 
 Keep in my mind, i am busy and its not my personal discord.
+
+Ive added some features that have not been tested
