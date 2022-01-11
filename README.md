@@ -4,7 +4,7 @@ You can add this API to your webstite, its to launch attacks on a cnc server fro
 
 To clear things up PHP is executed on the server, meaning the client wont be able to see any of the PHP code like your servers login information.  
 
-I WILL NOT HELP YOU SETUP A CNC SERVER FOR YOU
+I WILL NOT HELP YOU SETUP A CNC SERVER
 
 If you need support then feel free to add me on discord
 jrx#4510
